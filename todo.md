@@ -1,0 +1,11 @@
+### Todo
+- [x] Create Character CRUD;
+- [ ] Link Character to Django User;
+- [ ] Protect routes with JWT;
+- [ ] Upgrade Character attributes;
+- [ ] Link Character Endpoints to IA;
+- [ ] Create Monster CRUD;
+- [ ] Associate Character and Monster models to generic Model;
+- [ ] Create a simple frontend;
+- [ ] Create NPC CRUD;
+- [ ] Create SolarisMap CRUD;
