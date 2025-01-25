@@ -1,9 +1,16 @@
 from django.db import models
 
 class Character(models.Model):
+    RACE_CHOICES = [
+        ('Human', 'Humano'),
+        ('Dwarf', 'Anão'),
+        ('Elf', 'Elfo'),
+    ]
+
+
     # Core details
-    name = models.CharField(max_length=100)
-    # race = models.CharField(max_length=50)  # E.g., Human, Elf
+    name = models.CharField(max_length=100, unique=True)
+    race = models.CharField(max_length=50, choices=RACE_CHOICES, null=True)  # E.g., Human, Elf
     # character_class = models.CharField(max_length=50)  # E.g., Fighter, Wizard
     # background = models.CharField(max_length=100)  # E.g., Acolyte, Soldier
     # alignment = models.CharField(max_length=50)  # E.g., Chaotic Good, Neutral
