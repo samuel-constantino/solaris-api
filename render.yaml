@@ -1,0 +1,22 @@
+databases:
+  - name: solaris_db
+    plan: free
+    databaseName: solaris_db
+    user: postgres
+
+services:
+  - type: web
+    plan: free
+    name: solaris_api
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn solaris_project.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: solaris_db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
