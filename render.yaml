@@ -2,7 +2,7 @@ databases:
   - name: solaris_db
     plan: free
     databaseName: solaris_db
-    user: postgres
+    user: admin
 
 services:
   - type: web
