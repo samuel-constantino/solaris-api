@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-aywxj$vz5%hjy8x^@vc48t+l3tlze$q@ab(hzuxsaqt1za4!w2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if not DEBUG:
@@ -35,7 +35,10 @@ if not DEBUG:
     # and renames the files with unique names for each version to support long-term caching
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'solaris-api.onrender.com'
+]
 
 
 # Application definition
