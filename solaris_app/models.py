@@ -2,9 +2,9 @@ from django.db import models
 
 class Character(models.Model):
     RACE_CHOICES = [
-        ('Human', 'Humano'),
-        ('Dwarf', 'Anão'),
-        ('Elf', 'Elfo'),
+        ('human', 'Humano'),
+        ('dwarf', 'Anão'),
+        ('elf', 'Elfo'),
     ]
 
 
